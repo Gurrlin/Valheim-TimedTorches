@@ -1,4 +1,4 @@
-﻿using System.Reflection;
+using System.Reflection;
 using System.Linq;
 using HarmonyLib;
 using BepInEx;
@@ -126,7 +126,8 @@ namespace TimedTorches
                 if(affectedSources.Contains(Utils.GetPrefabName(__instance.gameObject)))
                 {
                     // Should never burn if under water
-                    float waterLevel = WaterVolume.GetWaterLevel(___m_enabledObject.transform.position);
+                    //modified for H&H by KhaibaGaming
+                    float waterLevel = Floating.GetLiquidLevel(___m_enabledObject.transform.position);
                     if(___m_enabledObject.transform.position.y < waterLevel)
                     {
                         return;
