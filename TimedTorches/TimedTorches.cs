@@ -126,7 +126,7 @@ namespace TimedTorches
                 if(affectedSources.Contains(Utils.GetPrefabName(__instance.gameObject)))
                 {
                     // Should never burn if under water
-                    //modified for H&H by KhaibaGaming
+                    //modified for H&H
                     float waterLevel = Floating.GetLiquidLevel(___m_enabledObject.transform.position);
                     if(___m_enabledObject.transform.position.y < waterLevel)
                     {
